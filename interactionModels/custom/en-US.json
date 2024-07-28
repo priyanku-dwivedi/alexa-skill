@@ -1,0 +1,599 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "month",
+              "elicitationRequired": true,
+              "type": "AMAZON.Month",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1481299798083.740411776487"
+              }
+            },
+            {
+              "name": "day",
+              "elicitationRequired": true,
+              "type": "AMAZON.Ordinal",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1481299798083.1593358884806"
+              }
+            },
+            {
+              "name": "year",
+              "elicitationRequired": true,
+              "type": "AMAZON.FOUR_DIGIT_NUMBER",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1481299798083.1586516788324"
+              }
+            }
+          ],
+          "name": "CaptureZodiacSignIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "genre",
+              "elicitationRequired": true,
+              "type": "AMAZON.Genre",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1248768010455.38352221355"
+              }
+            },
+            {
+              "name": "actor",
+              "elicitationRequired": true,
+              "type": "AMAZON.Actor",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1248768010455.1519037061750"
+              }
+            },
+            {
+              "name": "language",
+              "elicitationRequired": true,
+              "type": "AMAZON.Language",
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1248768010455.857424946034"
+              }
+            }
+          ],
+          "name": "CaptureMovieIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "month",
+              "type": "AMAZON.Month"
+            },
+            {
+              "name": "day",
+              "type": "AMAZON.Ordinal"
+            },
+            {
+              "name": "year",
+              "type": "AMAZON.FOUR_DIGIT_NUMBER"
+            }
+          ],
+          "name": "CaptureZodiacSignIntent",
+          "samples": [
+            "zodiac sign for {day} {month} and {year}",
+            "zodiac sign for {day} and {month}",
+            "give zodiac sign for people born in {month}",
+            "zodiac sign for {month} and {day}",
+            "{day} {month} {year}",
+            "{year} {month} {day}",
+            "{year} {month}",
+            "{month} {year}",
+            "{month} {day}",
+            "{day} {month}",
+            "{year}",
+            "{day}",
+            "{month}",
+            "my birthday is {month} {day} {year}",
+            "my birthday is on {day} {month} {year}",
+            "my birth day is on {day} {month} {year}",
+            "i was born on {day}",
+            "i was born on {year}",
+            "i was born in {month}",
+            "in {month} of {year} i was born",
+            "i was born on {month} {year}",
+            "i was born on {month} {day}",
+            "i was born on {day} {month}",
+            "i was born on  {year} {month} {day}",
+            "i was born on {day} {month} {year}",
+            "whats the zodiac sign",
+            "could you please tell me what my zodiac sign is",
+            "please tell me what my zodiac sign is based on my birthday",
+            "let me know my zodiac sign",
+            "tell me my zodiac sign for my birthday",
+            "tell me my birthday zodiac sign",
+            "for my birthday please tell me my zodiac sign",
+            "tell zodiac sign for my birthday",
+            "i was born on {day} {month} {year} what is my zodiac sign",
+            "please state my zodiac sign once more",
+            "please repeat my zodiac sign",
+            "tell my zodiac sign once more",
+            "say my zodiac sign",
+            "what is your take on my zodiac sign",
+            "can you tell me what my zodiac sign is",
+            "what about my zodiac sign",
+            "can you tell my zodiac sign",
+            "can you give my zodiac sign",
+            "what is my zodiac sign",
+            "want to know my zodiac sign",
+            "zodiac sign",
+            "do you know what my zodiac sign is",
+            "find out what my zodiac sign is",
+            "get my zodiac sign",
+            "open my zodiac sign",
+            "I was born on {month} {day} {year}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "genre",
+              "type": "AMAZON.Genre"
+            },
+            {
+              "name": "actor",
+              "type": "AMAZON.Actor"
+            },
+            {
+              "name": "language",
+              "type": "AMAZON.Language"
+            }
+          ],
+          "name": "CaptureMovieIntent",
+          "samples": [
+            "{language} {actor} {genre}",
+            "{language} {actor}",
+            "{actor} {language}",
+            "{actor} {genre}",
+            "{genre} {actor}",
+            "{actor}",
+            "{genre}",
+            "{language}",
+            "best {actor} movie",
+            "best {genre} movie",
+            "best movie of {actor} in {language}",
+            "best movie of {actor} in {genre}",
+            "best movie in {language}",
+            "best movie in {genre}",
+            "best movie of {actor}",
+            "suggest a {genre} movie in {language}",
+            "suggest a {language} movie of {actor}",
+            "suggest a {genre} movie of {actor}",
+            "suggest a movie of {actor}",
+            "suggest a {language} movie",
+            "suggest a movie to watch in {genre}",
+            "I want to watch a {language} movie of {actor}",
+            "I want to watch a {genre} movie of {actor}",
+            "I want to watch a {genre} movie",
+            "I want to watch a {actor} movie",
+            "I want to watch {language} movie",
+            "tell me a great movie",
+            "which movie will be best to watch",
+            "which is a good movie to watch with family",
+            "which is a good movie to watch with friends",
+            "which is a good movie to watch on weekend",
+            "let me know a good movie",
+            "let me know the best movie",
+            "tell me a movie for time pass",
+            "best movie of all time",
+            "top movie to watch",
+            "can you tell me a movie to watch with family",
+            "movie to watch with friends",
+            "movie to watch on weekend",
+            "which movie is the best",
+            "want to know which movie to watch",
+            "movie to watch",
+            "which movie should I watch",
+            "tell me a good movie",
+            "recommend a good movie",
+            "suggest a good movie",
+            "tell me a movie",
+            "recommend a movie",
+            "suggest a movie",
+            "{genre} {actor} {language}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "December"
+              }
+            },
+            {
+              "name": {
+                "value": "November"
+              }
+            },
+            {
+              "name": {
+                "value": "October"
+              }
+            },
+            {
+              "name": {
+                "value": "September"
+              }
+            },
+            {
+              "name": {
+                "value": "August"
+              }
+            },
+            {
+              "name": {
+                "value": "July"
+              }
+            },
+            {
+              "name": {
+                "value": "June"
+              }
+            },
+            {
+              "name": {
+                "value": "May"
+              }
+            },
+            {
+              "name": {
+                "value": "April"
+              }
+            },
+            {
+              "name": {
+                "value": "March"
+              }
+            },
+            {
+              "name": {
+                "value": "February"
+              }
+            },
+            {
+              "name": {
+                "value": "January"
+              }
+            }
+          ],
+          "name": "AMAZON.Month"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Romance"
+              }
+            },
+            {
+              "name": {
+                "value": "Thriller"
+              }
+            },
+            {
+              "name": {
+                "value": "Family"
+              }
+            },
+            {
+              "name": {
+                "value": "Fantasy"
+              }
+            },
+            {
+              "name": {
+                "value": "Film-noir"
+              }
+            },
+            {
+              "name": {
+                "value": "Mystery"
+              }
+            },
+            {
+              "name": {
+                "value": "Horror"
+              }
+            },
+            {
+              "name": {
+                "value": "Animation"
+              }
+            },
+            {
+              "name": {
+                "value": "Adventure"
+              }
+            },
+            {
+              "name": {
+                "value": "Comedy"
+              }
+            },
+            {
+              "name": {
+                "value": "Western"
+              }
+            },
+            {
+              "name": {
+                "value": "Biography"
+              }
+            },
+            {
+              "name": {
+                "value": "Action"
+              }
+            },
+            {
+              "name": {
+                "value": "Crime"
+              }
+            },
+            {
+              "name": {
+                "value": "Drama"
+              }
+            }
+          ],
+          "name": "AMAZON.Genre"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Shahid Kapoor"
+              }
+            },
+            {
+              "name": {
+                "value": "Paresh Rawal"
+              }
+            },
+            {
+              "name": {
+                "value": "Abhishek Bachhan"
+              }
+            },
+            {
+              "name": {
+                "value": "Hrithik Roshan"
+              }
+            },
+            {
+              "name": {
+                "value": "Ranveer Singh"
+              }
+            },
+            {
+              "name": {
+                "value": "Ranbir Kapoor"
+              }
+            },
+            {
+              "name": {
+                "value": "Ajay Devgn"
+              }
+            },
+            {
+              "name": {
+                "value": "Sunil Shetty"
+              }
+            },
+            {
+              "name": {
+                "value": "Akshay Kumar"
+              }
+            },
+            {
+              "name": {
+                "value": "Amitabh Bachhan"
+              }
+            },
+            {
+              "name": {
+                "value": "Amir Khan"
+              }
+            },
+            {
+              "name": {
+                "value": "Salman Khan"
+              }
+            },
+            {
+              "name": {
+                "value": "Shahrukh Khan"
+              }
+            },
+            {
+              "name": {
+                "value": "Audrey Hepburn"
+              }
+            },
+            {
+              "name": {
+                "value": "Henry Thomas"
+              }
+            },
+            {
+              "name": {
+                "value": "Werner Krauss"
+              }
+            },
+            {
+              "name": {
+                "value": "Orson Welles"
+              }
+            },
+            {
+              "name": {
+                "value": "Guy Pearce"
+              }
+            },
+            {
+              "name": {
+                "value": "Anthony Perkins"
+              }
+            },
+            {
+              "name": {
+                "value": "Daveigh Chase"
+              }
+            },
+            {
+              "name": {
+                "value": "Matthew McConaughey"
+              }
+            },
+            {
+              "name": {
+                "value": "Kang-ho Song"
+              }
+            },
+            {
+              "name": {
+                "value": "Clint Eastwood"
+              }
+            },
+            {
+              "name": {
+                "value": "Liam Neeson"
+              }
+            },
+            {
+              "name": {
+                "value": "Christian Bale"
+              }
+            },
+            {
+              "name": {
+                "value": "Marlon Brando"
+              }
+            },
+            {
+              "name": {
+                "value": "Tim Robbins"
+              }
+            }
+          ],
+          "name": "AMAZON.Actor"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Hindi"
+              }
+            },
+            {
+              "name": {
+                "value": "English"
+              }
+            }
+          ],
+          "name": "AMAZON.Language"
+        }
+      ],
+      "invocationName": "chatbot project"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What month were you born"
+          }
+        ],
+        "id": "Elicit.Slot.1481299798083.740411776487"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Which day were you born"
+          }
+        ],
+        "id": "Elicit.Slot.1481299798083.1593358884806"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is your year of birth"
+          }
+        ],
+        "id": "Elicit.Slot.1481299798083.1586516788324"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "I like horror what genre you like"
+          }
+        ],
+        "id": "Elicit.Slot.1248768010455.38352221355"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Who is your favorite actor"
+          }
+        ],
+        "id": "Elicit.Slot.1248768010455.1519037061750"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is your preferred language for the movie"
+          }
+        ],
+        "id": "Elicit.Slot.1248768010455.857424946034"
+      }
+    ]
+  }
+}
